@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1019729526766",
+    "project_id": "fasum-aryadarmasaputra",
+    "storage_bucket": "fasum-aryadarmasaputra.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019729526766:android:7ff2146e684ab3d182d8ff",
+        "android_client_info": {
+          "package_name": "com.example.fasum"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZCRqzXbxtKs4vyfVU1X5sUfoI9x-JWks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
