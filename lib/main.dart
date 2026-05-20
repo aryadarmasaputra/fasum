@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/sign_up_screen.dart';
+import 'screens/sign_in_screen.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: SignUpScreen(),
+      home: const SignInScreen(),
     );
   }
 }
