@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fasum/screens/add_post_screen.dart';
+import 'package:fasum/screens/detail_screen.dart';
 import 'package:fasum/screens/sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
