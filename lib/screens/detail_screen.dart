@@ -58,33 +58,34 @@ class _DetailScreenState extends State<DetailScreen> {
             Stack(
               children: [
                 Hero(
-                  tag: widget.heroTag, 
-                child: Image.memory(
-                  base64Decode(widget.imageBase64!), 
-                  width: double.infinity, 
-                  height: 250, fit: 
-                  BoxFit.cover),
+                  tag: widget.heroTag,
+                  child: Image.memory(
+                    base64Decode(widget.imageBase64!),
+                    width: double.infinity,
+                    height: 250,
+                    fit: BoxFit.cover,
                   ),
-                  Positioned: Positioned(
-                    top: 12,
-                    right: 12,
-                    child: IconButton(
-                      Icon(const Icon(Icons.fullscreen, color: Colors.white),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: () => FullImageScreen(imageBase64: widget.imageBase64!),
-                          ),
-                        );
-                      },
-                      Tooltip: 'lihat gambar penuh',
-                      style: IconButton.styleForm(
-                        backgroundColor: colors.black45,
-                      ),
-                    )
+                ),
+                Positioned(
+                  top: 12,
+                  right: 12,
+                  child: IconButton(
+                    icon: const Icon(Icons.fullscreen, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              FullImageScreen(imageBase64: widget.imageBase64!),
+                        ),
+                      );
+                    },
+                    tooltip: 'lihat gambar penuh',
+                    style: IconButton.styleFrom(
+                      backgroundColor: Colors.black45,
+                    ),
                   ),
-                  )
+                ),
               ],
             ),
             Padding(
@@ -99,21 +100,22 @@ class _DetailScreenState extends State<DetailScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(children: [
-                              const Icon(
-                                Icons.category,
-                                size: 20,
-                                color: Colors.red,
-                              ),
-                              const SizedBox(width: 4),
-                              Text(
-                                widget.category,
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.category,
+                                  size: 20,
+                                  color: Colors.red,
                                 ),
-                              ),
-                            ],
+                                const SizedBox(width: 4),
+                                Text(
+                                  widget.category,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
                             const SizedBox(height: 8),
                             Row(
@@ -126,7 +128,10 @@ class _DetailScreenState extends State<DetailScreen> {
                                 const SizedBox(width: 4),
                                 Text(
                                   createdAtFormatted,
-                                  style: const TextStyle(fontSize: 14, color: Colors.grey),
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.grey,
+                                  ),
                                 ),
                               ],
                             ),
@@ -135,9 +140,13 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                       IconButton(
                         onPressed: openMap,
-                        icon: const Icon(Icons.map, size: 38, color: Colors.green),
+                        icon: const Icon(
+                          Icons.map,
+                          size: 38,
+                          color: Colors.green,
+                        ),
                         tooltip: 'buka di google maps',
-                      )
+                      ),
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -145,14 +154,12 @@ class _DetailScreenState extends State<DetailScreen> {
                     widget.description,
                     style: const TextStyle(fontSize: 16),
                   ),
-                 
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
-      );
-    
+    );
   }
 }
