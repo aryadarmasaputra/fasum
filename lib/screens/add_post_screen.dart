@@ -598,8 +598,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
     try {
       // ✅ Gunakan _imageBytes langsung, bukan _image!.readAsBytes()
       final base64Image = base64Encode(_imageBytes!);
-      const apiKey =
-          'GANTI_DENGAN_API_KEY_BARU'; // ⚠️ API key lama sudah diekspos, ganti!
+      const apiKey = 'AIzaSyC7gqszgh_PThCTXmYsvMheIQxodz7FdbA';
       const url =
           'https://generativelanguage.googleapis.com/v1/models/'
           'gemini-2.0-flash:generateContent?key=$apiKey';
